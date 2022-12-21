@@ -1,0 +1,97 @@
+<div class="top">
+  <div class="row">
+    <div class="col s6 offset-s3 offset-m4 m4 l2 offset-l1 ">
+      <div class="card">
+        <div class="card-image">
+          <img 
+            class="responsive-img"
+            src="Content/img/{{img}}"
+            width="280"
+            height="405"
+            
+            alt=""
+          />
+        </div>
+        <div class="card-content center-align">
+          <p> <b> {{month}} {{date}},</b> <i> &nbsp {{day}} - {{time}}</i> </p>
+        </div>
+      </div>
+
+    </div>
+    <div class="col s12 m12 l9">
+      <div class="row top">
+        <div class="col s11 m9 offset-m1 l7 offset-l2  ">
+          <h6 class="center-align">Экран</h6>
+          <hr class="ln" />
+        </div>
+        <div class="col s1 offset-m1 offset-l2   ">
+          <div class="valign-wrapper ">
+            <h6 >Ряд</h6>
+          </div>
+        </div>
+      </div>
+      <div id ="fm" >
+        <div class="row top">
+          <div class="col s11  center-align">
+            {{{seat 1 5 cont}}}
+          </div>
+          <div class="col s1">
+            <div class="valign-wrapper  ">
+              <h6>1</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s11  center-align">
+            {{{seat 6 12 cont}}}
+          </div>
+          <div class="col s1">
+            <div class="valign-wrapper ">
+              <h6>2</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s11  center-align">
+            {{{seat 13 19 cont}}}
+          </div>
+          <div class="col s1">
+            <div class="valign-wrapper ">
+              <h6>3</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s11 center-align">
+            {{{seat 20 26 cont}}}
+          </div>
+          <div class="col s1 valign-wrapper">
+            <div class="valign-wrapper ">
+              <h6>4</h6>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s11 center-align">
+            {{#if isAuth }}
+            <button id="btnsub" class="btn waves-effect teal" onclick="buyTicket()" data-idRasp="{{idRasp}}"  name="action" >Купити <i class="material-icons right">sentiment_very_satisfied</i></button>
+            {{else}}
+            <button id="btnsub" class="btn waves-effect teal"  data-idRasp="{{idRasp}}"  name="action" >Купити <i class="material-icons right">sentiment_very_satisfied</i></button>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+
+      {{#if isAuth}}{{else}}
+        <div class="row">
+          <div class="col s11">
+            <h6 class="center-align red-text text-accent-4">Для придбання
+              квітків потрібно авторизуватися
+            </h6>
+          </div>
+        </div>
+      {{/if}}
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  
+}
+
+main {
+  flex: 1 0 auto;
+  
+  
+}
+
+img {
+  margin-top: 8px
+}
+.top {
+padding-top: 1rem;
+}
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+  background-color: #e5e1d5
+}
+.tabs .indicator {
+  
+  background-color: black;
+  
+}
+.tabs .tab a:hover, .tabs .tab a.active {
+  background-color: transparent;
+  color: black;
+}
+.tabs .tab a {
+  color: #455a64;
+ 
+}
+.ln {
+  background-color: gray;
+  height: 3px;
+  width: 100%;
+}
+.feedback{
+  background-color: white;
+  border-width: 4px;
+  border-radius: 10px;
+  border-color: black;
+
+}
+.ticket{
+  width: 100px;
+  height: 40px;
+  background-color: white;
+  border-width: 4px ;
+ 
+  border-color:blue
+  
+}

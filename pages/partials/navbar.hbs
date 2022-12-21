@@ -1,0 +1,163 @@
+<div class="navbar-fixed">
+
+  <nav style="background-color: #ffffff ;" role="navigation">
+    <div class="nav-wrapper container">
+      <img src="/images/icons/filmax-logo-f.png" height="40" alt="" />
+      <a
+        href="#"
+        data-target="mobile-demo"
+        class="sidenav-trigger red accent-1"
+      > <i class="material-icons"> menu </i></a>
+      <ul class="right hide-on-med-and-down">
+        {{#if now}}
+          <li class="active"><a href="/"><span
+                class="grey-text text-darken-4"
+              >Зараз у прокаті</span></a></li>
+        {{else}}
+          <li><a href="/"><span class="grey-text text-darken-4">Зараз у прокаті</span></a></li>
+        {{/if}}
+        {{#if soon}}
+          <li class="active"><a href="/soon"><span
+                class="grey-text text-darken-4"
+              >Скоро у прокаті</span></a></li>
+        {{else}}
+          <li><a href="/soon"><span class="grey-text text-darken-4">Скоро у
+                прокаті</span></a></li>
+        {{/if}}
+        {{#if vidguki}}
+          <li class="active"><a href="/feedback"><span
+                class="grey-text text-darken-4"
+              > Відгуки</span></a></li>
+        {{else}}
+          <li><a href="/feedback"><span
+                class="grey-text text-darken-4"
+              >Відгуки</span></a></li>
+        {{/if}}
+        {{#if isAuth}}
+          {{#if abinet}}
+            <li class="active"><a href="/cabinet"><span
+                  class="grey-text text-darken-4"
+                >Кабінет</span></a></li>
+          {{else}}
+            <li><a href="/cabinet"><span class="grey-text text-darken-4">Кабінет
+                </span></a></li>
+          {{/if}}
+          <li><a href="/logout"><span
+                class="grey-text text-darken-4"
+              >Вихід</span></a></li>
+        {{else}}
+          {{#if auth}}
+            <li class="active"><a href="/auth"><span
+                  class="grey-text text-darken-4"
+                >Вхід</span></a></li>
+          {{else}}
+            <li><a href="/auth"><span
+                  class="grey-text text-darken-4"
+                >Вхід</span></a></li>
+          {{/if}}
+        {{/if}}
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul class="sidenav" id="mobile-demo">
+  {{#if now}}
+    <li class="active">
+      <a href="/">
+        <span class="grey-text text-darken-4">
+          Зараз у прокаті
+        </span>
+      </a>
+    </li>
+  {{else}}
+    <li>
+      <a href="/">
+        <span class="grey-text text-darken-4">
+          Зараз у прокаті
+        </span>
+      </a>
+    </li>
+  {{/if}}
+  {{#if soon}}
+    <li class="active">
+      <a href="/soon">
+        <span class="grey-text text-darken-4">
+          Скоро у прокаті
+        </span>
+      </a>
+    </li>
+  {{else}}
+    <li>
+      <a href="/soon">
+        <span class="grey-text text-darken-4">
+          Скоро у прокаті
+        </span>
+      </a>
+    </li>
+  {{/if}}
+  {{#if vidguki}}
+    <li class="active">
+      <a href="/feedback">
+        <span class="grey-text text-darken-4">
+          Відгуки
+        </span>
+      </a>
+    </li>
+  {{else}}
+    <li>
+      <a href="/feedback">
+        <span class="grey-text text-darken-4">
+          Відгуки
+        </span>
+      </a>
+    </li>
+  {{/if}}
+  {{#if isAuth}}
+    {{#if abinet}}
+      <li class="active">
+        <a href="/cabinet">
+          <span class="grey-text text-darken-4">
+            Кабінет
+          </span>
+        </a>
+      </li>
+    {{else}}
+      <li>
+        <a href="/cabinet">
+          <span class="grey-text text-darken-4">
+            Кабінет
+          </span>
+        </a>
+      </li>
+    {{/if}}
+    <li>
+      <a href="/logout">
+        <span class="grey-text text-darken-4">
+          Вихід
+        </span>
+      </a>
+    </li>
+  {{else}}
+    {{#if auth}}
+      <li class="active">
+        <a href="/auth">
+          <span class="grey-text text-darken-4">
+            Вхід
+          </span>
+
+        </a>
+      </li>
+    {{else}}
+      <li>
+        <a href="/auth">
+          <span class="grey-text text-darken-4">
+            Вхід
+          </span>
+
+        </a>
+      </li>
+    {{/if}}
+  {{/if}}
+
+</ul>
